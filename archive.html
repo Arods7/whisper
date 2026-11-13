@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آرشیو تابلوها — Painting Whisper</title>
+<meta name="description" content="آرشیو کامل نقاشی‌های Painting Whisper با جست‌وجو، فیلتر سبک و مرتب‌سازی.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="wrap head-grid">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">P&#8202;W</span>
+      <span class="brand-text">
+        <strong>Painting Whisper</strong>
+        <small>زمزمه‌ی نقاشی‌ها</small>
+      </span>
+    </a>
+    <nav class="head-nav" aria-label="فهرست">
+      <a href="index.html" class="nav-link">امروز</a>
+      <a href="archive.html" class="nav-link is-active">آرشیو</a>
+      <a href="https://t.me/painting_whisper" class="nav-link nav-tg" target="_blank" rel="noopener">کانال</a>
+      <a href="about.html" class="nav-link">درباره</a>
+    </nav>
+    <div class="head-orn" aria-hidden="true">✦</div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="kicker">گنجینه‌ی زمزمه‌ها</span>
+      <h1>آرشیوِ تابلوها</h1>
+      <p>۱۰۰ شاهکار از موزه‌ی هنر شیکاگو — جست‌وجو کنید، بچینید، و روی هر تابلو «زمزمه‌اش» را بخوانید.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="arch-tools">
+      <div class="search-wrap">
+        <span class="search-ic" aria-hidden="true">⌕</span>
+        <input type="search" id="arch-search" class="arch-search"
+               placeholder="جست‌وجو: نام تابلو، هنرمند، سال…"
+               autocomplete="off" aria-label="جست‌وجو در آرشیو">
+      </div>
+      <div class="sort-wrap">
+        <label class="sort-label" for="arch-sort">چیدن بر پایهٔ</label>
+        <select id="arch-sort" class="arch-sort" aria-label="مرتب‌سازی">
+          <option value="old">کهن‌ترین تابلو</option>
+          <option value="new">تازه‌ترین تابلو</option>
+          <option value="artist">نامِ هنرمند</option>
+          <option value="title">نامِ تابلو</option>
+        </select>
+      </div>
+      <span class="arch-count" id="arch-count">۱۰۰ تابلو</span>
+    </div>
+
+    <div class="filter-row" id="filter-row" role="group" aria-label="فیلتر سبک"></div>
+    <div class="archive-grid" id="archive-grid"></div>
+  </div>
+</main>
+
+<section class="tg-band" aria-label="کانال تلگرام">
+  <div class="wrap tg-inner">
+    <div class="tg-text">
+      <h2>هر روز زمزمه‌ی تازه در تلگرام</h2>
+      <p>به کانال Painting Whisper بپیوندید تا نقاشیِ هر روز را با روایتش دریافت کنید.</p>
+    </div>
+    <a class="tg-btn" href="https://t.me/painting_whisper" target="_blank" rel="noopener">عضویت در @painting_whisper</a>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="brand-mark" aria-hidden="true">P&#8202;W</span>
+      <div>
+        <strong>Painting Whisper</strong>
+        <p>هر روز یک نقاشی، با روایتِ دقیق.</p>
+      </div>
+    </div>
+    <nav class="foot-nav" aria-label="پیوندها">
+      <a href="index.html">امروز</a>
+      <a href="archive.html">آرشیو</a>
+      <a href="about.html">درباره و منابع</a>
+      <a href="https://t.me/painting_whisper" target="_blank" rel="noopener">کانال تلگرام</a>
+    </nav>
+    <p class="foot-fine">تصاویر: نسخه‌های مالکیت عمومی (ویکی‌مدیا کامانز) · اطلاعات: اسناد عمومی موزه‌ی هنر شیکاگو</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script src="player.js"></script>
+</body>
+</html>

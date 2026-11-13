@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>درباره و منابع — Painting Whisper</title>
+<meta name="description" content="درباره‌ی Painting Whisper، منبع اطلاعات و تصاویر، و راهنمای ساخت سایت مشابه.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="wrap head-grid">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">P&#8202;W</span>
+      <span class="brand-text">
+        <strong>Painting Whisper</strong>
+        <small>زمزمه‌ی نقاشی‌ها</small>
+      </span>
+    </a>
+    <nav class="head-nav" aria-label="فهرست">
+      <a href="index.html" class="nav-link">امروز</a>
+      <a href="archive.html" class="nav-link">آرشیو</a>
+      <a href="https://t.me/painting_whisper" class="nav-link nav-tg" target="_blank" rel="noopener">کانال</a>
+      <a href="about.html" class="nav-link is-active">درباره</a>
+    </nav>
+    <div class="head-orn" aria-hidden="true">✦</div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="kicker">پشتِ صحنه</span>
+      <h1>درباره‌ی Painting Whisper</h1>
+      <p>ایده، منابع، و راهِ ادامه‌دادنِ پروژه.</p>
+    </div>
+  </section>
+
+  <section class="wrap about-body">
+    <div class="stats-row" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:26px;">
+      <div style="border:1.5px solid var(--line); background:var(--paper2); padding:14px 26px; text-align:center;">
+        <span id="stat-count" style="font-family:var(--display); font-size:30px; display:block;">۱۰۰</span>
+        <small style="color:var(--ink-soft);">تابلو در چرخه</small>
+      </div>
+      <div style="border:1.5px solid var(--line); background:var(--paper2); padding:14px 26px; text-align:center;">
+        <span id="stat-artists" style="font-family:var(--display); font-size:30px; display:block;">—</span>
+        <small style="color:var(--ink-soft);">هنرمند</small>
+      </div>
+      <div style="border:1.5px solid var(--line); background:var(--paper2); padding:14px 26px; text-align:center;">
+        <span style="font-family:var(--display); font-size:30px; display:block;">۱۵۷۷</span>
+        <small style="color:var(--ink-soft);">قدیمی‌ترین تابلو (ال‌گروکو)</small>
+      </div>
+    </div>
+
+    <h2>ایده‌ی سایت</h2>
+    <p>«Painting Whisper» بر این باور است که هر تابلو، زمزمه‌ای دارد که در شلوغیِ گالری‌ها گم می‌شود. پس هر روز فقط <b>یک</b> نقاشی نمایش داده می‌شود — با روایتِ دقیق، یک «زمزمه»، و پالتِ رنگی که از خودِ تابلو استخراج شده است.</p>
+    <p>انتخابِ نقاشیِ روز <b>قطعی و چرخشی</b> است: همه‌ی بازدیدکنندگانِ یک روز، همین تابلو را می‌بینند؛ و در چرخه‌ی ۱۰۰ روزه، هیچ تابلویی دوبار پشت‌سرهم نمی‌آید.</p>
+
+    <h2>منابعِ اطلاعات و تصاویر</h2>
+    <ul class="about-list">
+      <li>متن‌ها: برگردانِ آزادِ فارسی از توضیحاتِ رسمیِ <b>موزه‌ی هنر شیکاگو</b> (Art Institute of Chicago) — از طریق رابط‌ی عمومیِ api.artic.edu؛ عنوان‌ها، سال‌ها، تکنیک، ابعاد و محلِ نگهداری عیناً از اسنادِ موزه.</li>
+      <li>تصاویر: بازتولیدهای <b>مالکیت عمومی</b> از ویکی‌مدیا کامانز.</li>
+      <li>پالتِ رنگِ هر تابلو با نمونه‌برداری از خودِ تصویر استخراج شده است.</li>
+    </ul>
+
+    <h2>چطور خودم ادامه‌اش بدهم؟</h2>
+    <p>این سایت یک قالبِ استاتیکِ ساده است؛ همه‌چیز در سه فایل است:</p>
+    <ol class="step-list">
+      <li><b>افزودن تابلوی تازه:</b> فایل <code>data.js</code> را باز کنید و یک شیء جدید با همان ساختار (کلید، نام فارسی/انگلیسی، هنرمند، سال، توضیح، زمزمه و پالت) اضافه کنید؛ تصویرش را هم در پوشه‌ی <code>web_images/</code> با همان کلید بگذارید. همین! آرشیو و فیلترها خودکار به‌روز می‌شوند و چرخه‌ی روزانه بلندتر می‌شود.</li>
+      <li><b>میزبانی رایگان:</b> فایل‌ها را روی GitHub Pages یا Netlify بگذارید — نیازی به سرور یا دیتابیس نیست.</li>
+      <li><b>دامنه‌ی اختصاصی:</b> مثلاً <code>paintingwhisper.com</code> را بخرید و در همان سرویسِ میزبانی وصل کنید.</li>
+      <li><b>گسترش منابع:</b> به‌جای یک موزه می‌توانید رکوردها را از موزه‌های دیگری هم بگیرید که رابط‌ی عمومی دارند (مانند Cleveland Museum of Art یا Rijksmuseum) و در همان فرمتِ <code>data.js</code> ذخیره کنید.</li>
+      <li><b>خبرنامه یا ربات:</b> چون انتخابِ روز قطعی است، می‌شود هر صبح همان تابلو را در یک کانال تلگرام یا خبرنامه هم منتشر کرد.</li>
+    </ol>
+
+    <div class="source-note">
+      <b>نکته‌ی صداقت:</b> توضیحِ فارسیِ هر تابلو برگردانِ آزادِ متنِ رسمیِ موزه است و هیچ جزئی از خودم به آن افزوده نشده؛ اگر جایی برای اطمینان بخواهید، در صفحه‌ی آرشیو نامِ انگلیسیِ اثر را جست‌وجو کنید تا به سندِ موزه برسید.
+    </div>
+  </section>
+</main>
+
+<section class="tg-band" aria-label="کانال تلگرام">
+  <div class="wrap tg-inner">
+    <div class="tg-text">
+      <h2>هر روز زمزمه‌ی تازه در تلگرام</h2>
+      <p>به کانال Painting Whisper بپیوندید تا نقاشیِ هر روز را با روایتش دریافت کنید.</p>
+    </div>
+    <a class="tg-btn" href="https://t.me/painting_whisper" target="_blank" rel="noopener">عضویت در @painting_whisper</a>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="brand-mark" aria-hidden="true">P&#8202;W</span>
+      <div>
+        <strong>Painting Whisper</strong>
+        <p>هر روز یک نقاشی، با روایتِ دقیق.</p>
+      </div>
+    </div>
+    <nav class="foot-nav" aria-label="پیوندها">
+      <a href="index.html">امروز</a>
+      <a href="archive.html">آرشیو</a>
+      <a href="about.html">درباره و منابع</a>
+      <a href="https://t.me/painting_whisper" target="_blank" rel="noopener">کانال تلگرام</a>
+    </nav>
+    <p class="foot-fine">تصاویر: نسخه‌های مالکیت عمومی (ویکی‌مدیا کامانز) · اطلاعات: اسناد عمومی موزه‌ی هنر شیکاگو</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script src="player.js"></script>
+</body>
+</html>

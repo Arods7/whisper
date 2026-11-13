@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painting Whisper — زمزمه‌ی نقاشی‌ها</title>
+<meta name="description" content="هر روز، یک نقاشی. گالری روزانه با روایت دقیق از بزرگ‌ترین موزه‌های جهان.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-head">
+  <div class="wrap head-grid">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">P&#8202;W</span>
+      <span class="brand-text">
+        <strong>Painting Whisper</strong>
+        <small>زمزمه‌ی نقاشی‌ها</small>
+      </span>
+    </a>
+    <nav class="head-nav" aria-label="فهرست">
+      <a href="index.html" class="nav-link is-active">امروز</a>
+      <a href="archive.html" class="nav-link">آرشیو</a>
+      <a href="https://t.me/painting_whisper" class="nav-link nav-tg" target="_blank" rel="noopener">کانال</a>
+      <a href="about.html" class="nav-link">درباره</a>
+    </nav>
+    <div class="head-orn" aria-hidden="true">✦</div>
+  </div>
+</header>
+
+<!-- ============ HERO / TODAY ============ -->
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div class="kicker-row">
+        <span class="rule" aria-hidden="true"></span>
+        <span class="kicker">گالریِ روزانه‌ی نقاشیِ کلاسیک</span>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <h1 class="hero-title">هر روز، یک نقاشی<br><em>و زمزمه‌ای که کمتر کسی شنیده</em></h1>
+
+      <div class="date-strip" id="date-strip">
+        <span class="ds-label">امروز</span>
+        <span id="fa-date">—</span>
+        <span class="ds-sep" aria-hidden="true">·</span>
+        <span id="greg-date">—</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- daily painting filled by script.js -->
+  <section class="feature" id="feature" aria-label="نقاشی امروز"></section>
+
+  <!-- ============ WISDOM STRIP ============ -->
+  <section class="wisdom" aria-label="گفتاورد">
+    <div class="wrap wisdom-inner">
+      <p class="quote" id="daily-quote">—</p>
+      <p class="quote-by" id="daily-quote-by">—</p>
+    </div>
+  </section>
+
+  <!-- ============ ARCHIVE PREVIEW ============ -->
+  <section class="shelf" aria-label="از آرشیو">
+    <div class="wrap">
+      <div class="shelf-head">
+        <h2>از آرشیوِ زمزمه‌ها</h2>
+        <a class="shelf-more" href="archive.html">همه‌ی ۱۰۰ تابلو ←</a>
+      </div>
+      <div class="shelf-grid" id="shelf-grid"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<section class="tg-band" aria-label="کانال تلگرام">
+  <div class="wrap tg-inner">
+    <div class="tg-text">
+      <h2>هر روز زمزمه‌ی تازه در تلگرام</h2>
+      <p>به کانال Painting Whisper بپیوندید تا نقاشیِ هر روز را با روایتش دریافت کنید.</p>
+    </div>
+    <a class="tg-btn" href="https://t.me/painting_whisper" target="_blank" rel="noopener">عضویت در @painting_whisper</a>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="brand-mark" aria-hidden="true">P&#8202;W</span>
+      <div>
+        <strong>Painting Whisper</strong>
+        <p>هر روز یک نقاشی، با روایتِ دقیق.</p>
+      </div>
+    </div>
+    <nav class="foot-nav" aria-label="پیوندها">
+      <a href="index.html">امروز</a>
+      <a href="archive.html">آرشیو</a>
+      <a href="about.html">درباره و منابع</a>
+      <a href="https://t.me/painting_whisper" target="_blank" rel="noopener">کانال تلگرام</a>
+    </nav>
+    <p class="foot-fine">تصاویر: نسخه‌های مالکیت عمومی (ویکی‌مدیا کامانز) · اطلاعات: اسناد عمومی موزه‌ی هنر شیکاگو</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script src="player.js"></script>
+</body>
+</html>
