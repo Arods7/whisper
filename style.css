@@ -480,3 +480,10 @@ body{background:radial-gradient(1200px 500px at 50% -100px,#fbf6ea,transparent),
 
 .art-frame-wrap{position:sticky;top:90px;align-self:start}
 @media(max-width:860px){.art-frame-wrap{position:static}}
+/* full-picture display: never crop paintings */
+.mini img{object-fit:contain;background:#1d1812;height:170px}
+.arch-top img{object-fit:contain;background:#1d1812;height:230px}
+.arch-card img,.shelf-grid img{aspect-ratio:1/1;object-fit:contain;background:#1d1812}
+
+.date-strip{direction:rtl;text-align:right;justify-content:flex-start}
+.date-strip #greg-date{direction:ltr;unicode-bidi:isolate}

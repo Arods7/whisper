@@ -8,27 +8,29 @@
 
   var ART = window.ARTWORKS || [];
 
-  /* ---------- تاریخ ---------- */
+  /* ---------- تاریخ (به وقت تهران) ---------- */
+  var TZ = "Asia/Tehran";
+  function parts(loc, d, opt) {
+    var o = {}; opt.timeZone = TZ;
+    new Intl.DateTimeFormat(loc, opt).formatToParts(d).forEach(function (p) { o[p.type] = p.value; });
+    return o;
+  }
   function faDate(d) {
-    try {
-      return new Intl.DateTimeFormat("fa-IR", { weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(d);
-    } catch (e) {
-      return d.toLocaleDateString("fa-IR");
-    }
+    var p = parts("fa-IR-u-ca-persian", d, { day: "numeric", month: "long", year: "numeric" });
+    return p.day + " " + p.month + " " + p.year;
   }
   function enDate(d) {
-    return new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric" }).format(d);
+    var p = parts("en-GB", d, { day: "numeric", month: "long", year: "numeric" });
+    return p.day + " " + p.month + " " + p.year;
   }
 
-  /* ---------- انتخابِ روز ---------- */
+  /* ---------- انتخابِ روز: هر ۲۴ ساعت (نیمه‌شب تهران) یک تابلوی بعدی ---------- */
   function dayNumber(d) {
-    var iran = new Date(d.getTime() + (3.5 * 60 + d.getTimezoneOffset()) * 60000);
-    return Math.floor(iran.getTime() / 86400000);
+    var p = parts("en-US", d, { day: "numeric", month: "numeric", year: "numeric" });
+    return Math.floor(Date.UTC(+p.year, +p.month - 1, +p.day) / 86400000);
   }
   function pickOfDay(n) {
-    var x = (n * 2654435761) % 4294967296;
-    x = (x ^ (x >>> 13)) % 1000003;
-    return Math.abs(x) % ART.length;
+    return ((n % ART.length) + ART.length) % ART.length;
   }
 
   var today = new Date();
@@ -36,6 +38,17 @@
   var idx = pickOfDay(dn);
   var art = ART[idx];
   var todayKey = art ? art.key : null;
+
+  /* هنگام گذر از نیمه‌شب تهران صفحه خودکار تازه می‌شود */
+  (function () {
+    var last = dn;
+    setInterval(function () {
+      if (dayNumber(new Date()) !== last) location.reload();
+    }, 30000);
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden && dayNumber(new Date()) !== last) location.reload();
+    });
+  })();
 
   /* ---------- ابزار رندر ---------- */
   function el(tag, cls, html) {

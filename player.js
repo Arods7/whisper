@@ -1,5 +1,5 @@
 (function(){
-var L=[{"t": "سونات مهتاب — بتهوون", "f": "audio/t1.mp3"}, {"t": "شبانه شماره ۲۱ — شوپن", "f": "audio/t3.mp3"}, {"t": "آریا روی سیم سل — باخ", "f": "audio/t4.mp3"}, {"t": "ژیمنوپدی شماره ۲ — ساتی", "f": "audio/t5.mp3"}, {"t": "سرنادِ کوچکِ شبانه — موتسارت", "f": "audio/t6.mp3"}];
+var L=[{"t": "سونات مهتاب — بتهوون", "f": "audio/t1.mp3"}, {"t": "شبانه شماره ۲۱ — شوپن", "f": "audio/t3.mp3"}, {"t": "آریا روی سیم سل — باخ", "f": "audio/t4.mp3"}, {"t": "ژیمنوپدی شماره ۲ — ساتی", "f": "audio/t5.mp3"}, {"t": "سرنادِ کوچکِ شبانه — موتسارت", "f": "audio/t6.mp3"}, {"t": "مهتاب (کلر دو لون) — دبوسی", "f": "audio/t7.mp3"}, {"t": "شبانه اپوس ۹ شماره ۲ — شوپن", "f": "audio/t8.mp3"}, {"t": "بهار، چهار فصل — ویوالدی", "f": "audio/t9.mp3"}, {"t": "سپیده‌دم (صبحگاه) — گریگ", "f": "audio/t10.mp3"}, {"t": "ژیمنوپدی شماره ۱ — ساتی", "f": "audio/t11.mp3"}];
 var a=new Audio();a.preload="auto";a.volume=.55;
 var i=+(sessionStorage.pwI||0)%L.length,on=localStorage.pwMusic!=="off";
 function load(){a.src=L[i].f;a.currentTime=+(sessionStorage.pwT||0);lab.textContent=L[i].t}
