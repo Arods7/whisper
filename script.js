@@ -119,7 +119,7 @@
     var frame = el("div", "art-frame");
     var mat = el("div", "mat");
     var img = document.createElement("img");
-    img.src = "web_images/" + a.key + ".jpg";
+    img.src = "web_images/" + a.key + ".webp";
     img.alt = a.fa + " — " + a.artist_fa;
     img.loading = "eager";
     mat.appendChild(img);
@@ -160,7 +160,7 @@
       var link = el("a", "mini");
       link.href = "archive.html#art-" + x.key;
       link.innerHTML =
-        '<span class="mini-frame"><img src="web_images/' + x.key + '.jpg" alt="' + esc(x.fa) + '" loading="lazy"></span>' +
+        '<span class="mini-frame"><img src="thumbs/' + x.key + '.webp" alt="' + esc(x.fa) + '" loading="lazy"></span>' +
         '<span class="mini-date">' + esc(x.year_fa.split(" ")[0]) + "</span>" +
         '<span class="mini-title">' + esc(x.fa) + "</span>" +
         '<span class="mini-artist">' + esc(x.artist_fa.split(" (")[0]) + "</span>";
@@ -254,7 +254,7 @@
           '<span class="arch-medium">' + esc(a.medium_fa) + "</span>";
         var top = el("div", "arch-top");
         var img = document.createElement("img");
-        img.src = "web_images/" + a.key + ".jpg";
+        img.src = "thumbs/" + a.key + ".webp";
         img.alt = a.fa;
         img.loading = "lazy";
         top.appendChild(img);
@@ -330,7 +330,7 @@
       var frame = el("div", "art-frame small");
       var mat = el("div", "mat");
       var img = document.createElement("img");
-      img.src = "web_images/" + a.key + ".jpg";
+      img.src = "web_images/" + a.key + ".webp";
       img.alt = a.fa;
       mat.appendChild(img);
       frame.appendChild(mat);
